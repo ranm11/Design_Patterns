@@ -10,7 +10,14 @@ set(observer_files
     observer/subject.cpp
     observer/main.cpp)
     target_sources(observer PRIVATE ${observer_files})
+elseif(${DP_Type} STREQUAL "PROTOTYPE")
 
+    project (prototype)
+    add_executable(prototype)
+    set(prototype_files 
+        prototype/prototype.cpp
+        prototype/main.cpp)
+        target_sources(prototype PRIVATE ${prototype_files})
   elseif(${DP_Type} STREQUAL "BARRIER")  
     project (syncBarrier)
     add_executable(syncBarrier)
