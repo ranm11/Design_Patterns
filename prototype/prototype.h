@@ -2,9 +2,9 @@
 
 class Iprototype
 {   
-    protected:
+    public:
     virtual std::shared_ptr<Iprototype> clone() = 0;
-}
+};
 
 
 class prototypeA : public Iprototype
@@ -14,7 +14,7 @@ class prototypeA : public Iprototype
     prototypeA(prototypeA & pr_a);
     private:
     std::shared_ptr<Iprototype> clone() override;
-}
+};
 
 class prototypeB : public Iprototype
 {
@@ -23,4 +23,4 @@ class prototypeB : public Iprototype
     prototypeB(prototypeB & pr_b);
     private:
     std::shared_ptr<Iprototype> clone() override;
-}
+};

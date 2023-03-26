@@ -13,14 +13,14 @@ prototypeB::prototypeB( prototypeB & pr_b)
 }
 
 
-prototypeA::clone()
+shared_ptr<Iprototype> prototypeA::clone()
 {
     cout<<"cloning A"<<endl;
-    return  new this;
+    return  make_shared<prototypeA>(*this);
 }
 
-prototypeB::clone()
+shared_ptr<Iprototype> prototypeB::clone()
 {
     cout<<"cloning B"<<endl;
-    return  new this;
+    return  make_shared<prototypeB>(*this);
 }
