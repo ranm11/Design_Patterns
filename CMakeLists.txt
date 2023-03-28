@@ -18,6 +18,12 @@ elseif(${DP_Type} STREQUAL "PROTOTYPE")
         prototype/prototype.cpp
         prototype/main.cpp)
         target_sources(prototype PRIVATE ${prototype_files})
+elseif(${DP_Type} STREQUAL "STARTEGY")
+        project (startegy)
+        add_executable(startegy)
+        set(startegy_files 
+            startegy/main.cpp)
+            target_sources(startegy PRIVATE ${startegy_files})
   elseif(${DP_Type} STREQUAL "BARRIER")  
     project (syncBarrier)
     add_executable(syncBarrier)
