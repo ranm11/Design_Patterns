@@ -18,6 +18,13 @@ elseif(${DP_Type} STREQUAL "PROTOTYPE")
         prototype/prototype.cpp
         prototype/main.cpp)
         target_sources(prototype PRIVATE ${prototype_files})
+elseif(${DP_Type} STREQUAL "VISITOR")
+        project (visitor)
+        add_executable(visitor)
+        set(visitor_files 
+            visitor/visitor.cpp
+            visitor/main.cpp)
+            target_sources(visitor PRIVATE ${visitor_files})        
 elseif(${DP_Type} STREQUAL "STARTEGY")
         project (startegy)
         add_executable(startegy)
