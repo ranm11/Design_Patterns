@@ -2,6 +2,8 @@
 #include<iostream>
 #include<algorithm>
 #include<string_view>
+#include <string>
+#include"node.h"
 #pragma once
 
 class Context
@@ -68,4 +70,25 @@ class ConcreteStrategyB : public Strategy
 
         return result;
     }
+};
+
+class ConcreteStrategyC : public Strategy    
+{
+    private:
+    std::string _algorithm_description;
+    node* bst;
+    void buildRandomBST(int NOF_nodes);
+    void destroyBST(){};
+    bool search_in_BST(node* _node, int elmnt) const;
+    void inorderSearch(node* _node);
+    void postOrderSearch(node* _node);
+    void preOrderSearch(node* _node);
+    void inverseBinaryTree(node* _node);
+    public:
+    ~ConcreteStrategyC(){destroyBST();}
+    ConcreteStrategyC(std::string conctereStagtegyStr);
+    std::string doAlgorithm(std::string data) const override;
+       
+    
+
 };

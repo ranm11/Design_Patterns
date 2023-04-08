@@ -29,6 +29,7 @@ elseif(${DP_Type} STREQUAL "STARTEGY")
         project (startegy)
         add_executable(startegy)
         set(startegy_files 
+        startegy/context.cpp
             startegy/main.cpp)
             target_sources(startegy PRIVATE ${startegy_files})
   elseif(${DP_Type} STREQUAL "BARRIER")  

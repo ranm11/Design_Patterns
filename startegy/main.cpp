@@ -12,5 +12,7 @@ int main()
     std::cout << "Client: Strategy is set to reverse sorting.\n";
     context.set_strategy(std::make_unique<ConcreteStrategyB>());
     context.doSomeBusinessLogic();
+    context.set_strategy(std::make_unique<ConcreteStrategyC>(std::string("sraech element in BTree")));
+    context.doSomeBusinessLogic();
     return 0;
 }
